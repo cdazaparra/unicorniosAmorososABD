@@ -40,7 +40,9 @@ DJANGO_APPS =(
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
-THIRD_APPS =()
+THIRD_APPS =(
+    'compressor',
+)
 INSTALLED_APPS = MY_APPS + DJANGO_APPS + THIRD_APPS
 # _______ FIN APPS
 
