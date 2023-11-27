@@ -5,7 +5,7 @@ from . import views
 app_name = "inicio_app"
 
 urlpatterns = [
-    path('',
+    path('InicioTemplateView',
          views.InicioTemplateView.as_view(),
          name='InicioTemplateView'),
 ]

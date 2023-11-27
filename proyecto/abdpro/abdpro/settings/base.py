@@ -42,6 +42,7 @@ DJANGO_APPS =(
 )
 THIRD_APPS =(
     'compressor',
+    'rest_framework',
 )
 INSTALLED_APPS = MY_APPS + DJANGO_APPS + THIRD_APPS
 # _______ FIN APPS
