@@ -7,6 +7,7 @@ __pycache__
 migrations
 migrations/*
 /migrations/*
+*/migrations/*
 # C extensions
 *.so
 entorno/*
