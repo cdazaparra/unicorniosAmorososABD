@@ -38,9 +38,9 @@ urlpatterns = [
         # ------------------------------------------------------------------
 
         path(
-                'TrabajoListAPIView/<pk>/',
-                views.TrabajoListAPIView.as_view(),
-                name='TrabajoListAPIView'
+                'TrabajoDetailAPIView/<pk>/',
+                views.TrabajoDetailAPIView.as_view(),
+                name='TrabajoDetailAPIView'
         ),
 
         # ------------------------------------------------------------------
@@ -50,4 +50,7 @@ urlpatterns = [
         path('DepartamentoListAPIView/',
                 views.DepartamentoListAPIView.as_view(),
                 name='DepartamentoListAPIView'),
+
+
+        
 ]

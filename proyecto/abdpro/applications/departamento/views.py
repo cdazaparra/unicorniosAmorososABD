@@ -77,7 +77,7 @@ class DepartamentoAPISerializer(CreateAPIView):
     serializer_class = DepartamentosSerializer
 
 # ------------------------------------------------------------------
-# API VER UN TRABAJO
+# API VER TODOS LOS TRABAJOS
 # ------------------------------------------------------------------
 class TrabajoListAPIView(ListAPIView):
     serializer_class = TrabajosSerializer
@@ -85,9 +85,18 @@ class TrabajoListAPIView(ListAPIView):
         return Trabajo.objects.all()
 
 # ------------------------------------------------------------------
-# API VER UN DEPARTAMENTO
+# API VER TODOS LOS DEPARTAMENTOS
 # ------------------------------------------------------------------
 class DepartamentoListAPIView(ListAPIView):
     serializer_class = DepartamentosSerializer
     def get_queryset(self):
         return Departamento.objects.all()
+
+# ------------------------------------------------------------------
+# API VER UN TRABAJO
+# ------------------------------------------------------------------
+class TrabajoDetailAPIView(RetrieveAPIView):
+    serializer_class = TrabajosSerializer
+    def get_queryset(self):
+        return Trabajo.objects.all()
+
