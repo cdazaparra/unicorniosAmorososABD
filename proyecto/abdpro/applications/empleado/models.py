@@ -7,6 +7,8 @@ class Habilidad(models.Model):
     class Meta:
         verbose_name = 'Habilidad'
         verbose_name_plural = 'Habilidades'
+    def __str__(self):
+        return self.habilidad+' ' + str(self.id)
 
 class Empleado(models.Model):
     nombres = models.CharField('Nombres', max_length=50)
