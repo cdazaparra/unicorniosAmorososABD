@@ -42,52 +42,75 @@ from .models import Departamento, Trabajo
 from .forms import NuevoDepartamentoForm
 
 # ------------------------------------------------------------------
-# CREAR DEPARTAMENTO
-# ------------------------------------------------------------------
-
-class NuevoDepartamento(CreateView):
-    # Modelo usado para la vista
-    model = Departamento
-    # Template usado en la vista
-    template_name = 'departamento/NuevoDepartamento.html'
-    # Contexto usado para la impresión en el html
-    context_object_name = 'NuevoDepartamento'
-    # formulario usado en la vista
-    form_class = NuevoDepartamentoForm
-    # Dirección a la que va cuando se ejecuta el submit
-    success_url = reverse_lazy('inicio_app:home')
-
-    def form_valid(self, form):
-        # Guardando los datos del formulario
-        departament = form.save(commit=False)
-        departament.save()
-        # Return del formulario completado
-        return super(NuevoDepartamento, self).form_valid(form)
-
-# ------------------------------------------------------------------
 # API CREAR UN TRABAJO
 # ------------------------------------------------------------------
-class TrabajoAPISerializer(CreateAPIView):
+class CrearTrabajo(CreateAPIView):
     serializer_class = TrabajosSerializer
 
 # ------------------------------------------------------------------
-# API CREAR UN DEPARTAMENTO
+# API VER TODOS LOS TRABAJOS
 # ------------------------------------------------------------------
-class DepartamentoAPISerializer(CreateAPIView):
-    serializer_class = DepartamentosSerializer
-
-# ------------------------------------------------------------------
-# API VER UN TRABAJO
-# ------------------------------------------------------------------
-class TrabajoListAPIView(ListAPIView):
+class ListarTrabajos(ListAPIView):
     serializer_class = TrabajosSerializer
     def get_queryset(self):
         return Trabajo.objects.all()
 
 # ------------------------------------------------------------------
-# API VER UN DEPARTAMENTO
+# API VER TRABAJO
 # ------------------------------------------------------------------
-class DepartamentoListAPIView(ListAPIView):
+class VerTrabajo(RetrieveAPIView):
+    serializer_class = TrabajosSerializer
+    def get_queryset(self):
+        return Trabajo.objects.all()
+
+# ------------------------------------------------------------------
+# API ACTUALIZAR TRABAJO
+# ------------------------------------------------------------------
+class ActualizarTrabajo(UpdateAPIView):
+    serializer_class = TrabajosSerializer
+    def get_queryset(self):
+        return Trabajo.objects.all()
+
+
+# ------------------------------------------------------------------
+# API ELIMINAR TRABAJO
+# ------------------------------------------------------------------
+class EliminarTrabajo(DestroyAPIView):
+    serializer_class = TrabajosSerializer
+    def get_queryset(self):
+        return Trabajo.objects.all()
+
+# ------------------------------------------------------------------
+# API CREAR UN DEPARTAMENTO
+# ------------------------------------------------------------------
+class CrearDepartamento(CreateAPIView):
+    serializer_class = DepartamentosSerializer
+# ------------------------------------------------------------------
+# API LISTAR TODOS LOS DEPARTAMENTOS
+# ------------------------------------------------------------------
+class ListarDepartamentos(ListAPIView):
     serializer_class = DepartamentosSerializer
     def get_queryset(self):
         return Departamento.objects.all()
+# ------------------------------------------------------------------
+# API VER UN DEPARTAMENTO
+# ------------------------------------------------------------------
+class VerDepartamento(RetrieveAPIView):
+    serializer_class = DepartamentosSerializer
+    def get_queryset(self):
+        return Departamento.objects.all()
+# ------------------------------------------------------------------
+# API ELIMINAR UN DEPARTAMENTO
+# ------------------------------------------------------------------
+class EliminarDepartamento(DestroyAPIView):
+    serializer_class = DepartamentosSerializer
+    def get_queryset(self):
+        return Departamento.objects.all()
+# ------------------------------------------------------------------
+# API ACTUALIZAR UN DEPARTAMENTO
+# ------------------------------------------------------------------
+class ActualziarDepartamento(UpdateAPIView):
+    serializer_class = DepartamentosSerializer
+    def get_queryset(self):
+        return Departamento.objects.all()
+    

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AgregarHabilidad = () => {
     const navigate = useNavigate()
-    const urlBase = "http://127.0.0.1:8000/Api/HabilidadesAPISerializer/";
+    const urlBase = "http://127.0.0.1:8000/Api/VerHabilidades/";
     const handleHabilidad = (e) =>{
         e.preventDefault();
         let data = document.getElementById('habilidad').value

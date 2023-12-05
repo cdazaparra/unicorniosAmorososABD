@@ -6,48 +6,74 @@ app_name = "departamento_app"
 
 urlpatterns = [
         # ------------------------------------------------------------------
-        # CREAR TRABAJOS
+        # CREAR TRABAJO
         # ------------------------------------------------------------------
 
-        path('TrabajoAPISerializer/',
-                views.TrabajoAPISerializer.as_view(),
-                name='TrabajoAPISerializer'),
-        # ------------------------------------------------------------------
-        # CREAR DEPARTAMENTOS
-        # ------------------------------------------------------------------
-
-        path('DepartamentoAPISerializer/',
-                views.DepartamentoAPISerializer.as_view(),
-                name='DepartamentoAPISerializer'),
+        path('CrearTrabajo/',
+                views.CrearTrabajo.as_view(),
+                name='CrearTrabajo'),
         # ------------------------------------------------------------------
         # LISTAR TRABAJOS
         # ------------------------------------------------------------------
 
-        path('TrabajoListAPIView/',
-                views.TrabajoListAPIView.as_view(),
-                name='TrabajoListAPIView'),
+        path('ListarTrabajos/',
+                views.ListarTrabajos.as_view(),
+                name='ListarTrabajos'),
+        # ------------------------------------------------------------------
+        # VER TRABAJO
+        # ------------------------------------------------------------------
+
+        path('VerTrabajo/<pk>/',
+                views.VerTrabajo.as_view(),
+                name='VerTrabajo'),
+        # ------------------------------------------------------------------
+        # ACTUALIZAR TRABAJO
+        # ------------------------------------------------------------------
+
+        path('ActualizarTrabajo/<pk>/',
+                views.ActualizarTrabajo.as_view(),
+                name='ActualizarTrabajo'),
+        # ------------------------------------------------------------------
+        # ELIMINAR TRABAJO
+        # ------------------------------------------------------------------
+
+        path('EliminarTrabajo/<pk>/',
+                views.EliminarTrabajo.as_view(),
+                name='EliminarTrabajo'),
+        # ------------------------------------------------------------------
+        # CREAR DEPARTAMENTO
+        # ------------------------------------------------------------------
+
+        path('CrearDepartamento/',
+                views.CrearDepartamento.as_view(),
+                name='CrearDepartamento'),
         # ------------------------------------------------------------------
         # LISTAR DEPARTAMENTOS
         # ------------------------------------------------------------------
 
-        path('DepartamentoListAPIView/<pk>/',
-                views.DepartamentoListAPIView.as_view(),
-                name='DepartamentoListAPIView'),
+        path('ListarDepartamentos/',
+                views.ListarDepartamentos.as_view(),
+                name='ListarDepartamentos'),
         # ------------------------------------------------------------------
-        # VER TRABAJO POR ID
-        # ------------------------------------------------------------------
-
-        path(
-                'TrabajoListAPIView/<pk>/',
-                views.TrabajoListAPIView.as_view(),
-                name='TrabajoListAPIView'
-        ),
-
-        # ------------------------------------------------------------------
-        # LISTAR DEPARTAMENTOS
+        # VER DEPARTAMENTO
         # ------------------------------------------------------------------
 
-        path('DepartamentoListAPIView/',
-                views.DepartamentoListAPIView.as_view(),
-                name='DepartamentoListAPIView'),
+        path('VerDepartamento/<pk>/',
+                views.VerDepartamento.as_view(),
+                name='VerDepartamento'),
+        # ------------------------------------------------------------------
+        # ACTUALIZAR DEPARTAMENTO
+        # ------------------------------------------------------------------
+
+        path('ActualziarDepartamento/<pk>/',
+                views.ActualziarDepartamento.as_view(),
+                name='ActualziarDepartamento'),
+        # ------------------------------------------------------------------
+        # ELIMINAR DEPARTAMENTO
+        # ------------------------------------------------------------------
+
+        path('EliminarDepartamento/<pk>/',
+                views.EliminarDepartamento.as_view(),
+                name='EliminarDepartamento'),
+        
 ]
