@@ -28,5 +28,5 @@ class Trabajo(models.Model):
         verbose_name_plural = 'Trabajos'
         ordering = ['nombreTrabajo']
         unique_together = ('nombreTrabajo', 'siglaTrabajo')
-        def __str__(self):
-            return self.nombreTrabajo + ' - ' + self.siglaTrabajo + str(self.id)
+    def __str__(self):
+        return self.nombreTrabajo + ' - ' + self.siglaTrabajo + str(self.id)

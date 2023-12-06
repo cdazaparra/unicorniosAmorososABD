@@ -1,8 +1,9 @@
 import React from 'react'
+import EliminarTrabajo from '../components/EliminarTrabajo'
 
 const Eliminar = () => {
   return (
-    <div>Eliminar</div>
+    <EliminarTrabajo></EliminarTrabajo>
   )
 }
 

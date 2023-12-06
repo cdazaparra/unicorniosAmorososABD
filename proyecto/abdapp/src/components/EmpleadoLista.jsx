@@ -3,7 +3,7 @@ import getEmpleadoApi from "../api/getEmpleado";
 
 const EmpleadoLista = () => {
     const [empleadosList, setEmpleadosList] = useState([]);
-    const urlBase = "http://127.0.0.1:8000/Api/EmpleadoListAPIView/";
+    const urlBase = "http://127.0.0.1:8000/ListarEmpleados/";
     // const urlBase = "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0";
     useEffect(() => {
         (async () => {
@@ -28,7 +28,7 @@ const EmpleadoLista = () => {
                                 <p>{empleados.nombres}</p>
                                 <p>{empleados.apellidos}</p>
                                 <p>{empleados.hv}</p>
-                                <p><img src={empleados.avatar} alt="Avatar"></img></p>
+                                <p><img className='avatar' src={empleados.avatar} alt="Avatar"></img></p>
                                 <p>{empleados.trabajo}</p>
                                 <p>{empleados.departamento}</p>
                                 <div>Habilidades: {empleados.habilidades.map(

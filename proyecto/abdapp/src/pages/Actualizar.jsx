@@ -1,8 +1,9 @@
 import React from 'react'
+import ActualizarTrabajo from '../components/ActualizarTrabajo'
 
 const Actualizar = () => {
   return (
-    <div>Actualizar</div>
+    <ActualizarTrabajo></ActualizarTrabajo>
   )
 }
 

@@ -1,9 +1,13 @@
 import React from 'react'
 import AgregarHabilidad from '../components/AgregarHabilidad'
+import AgregarTrabajo from '../components/AgregarTrabajo'
 
 const Crear = () => {
   return (
-    <AgregarHabilidad></AgregarHabilidad>
+    <div>
+      <AgregarHabilidad></AgregarHabilidad>
+      <AgregarTrabajo></AgregarTrabajo>
+    </div>
   )
 }
 
