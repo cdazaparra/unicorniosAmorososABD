@@ -5,6 +5,7 @@ const postTrabajoApi = (url,trabajo,sigla, activo)=>{
     console.log('Url: ',url);
     console.log('trabajo: ',trabajo);
     console.log('activo: ',activo);
+    console.log('sigla: ',sigla);
     if(activo=='on'){
         activo=true
     }
